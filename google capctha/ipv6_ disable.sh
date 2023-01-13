@@ -1,4 +1,5 @@
 #!/bin/bash
+#bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/google%20capctha/ipv6_%20disable.sh)
 echo "copy to file"
 echo "net.ipv6.conf.all.disable_ipv6=1"
 echo "net.ipv6.conf.default.disable_ipv6=1"
