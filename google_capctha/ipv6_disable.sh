@@ -5,11 +5,12 @@ echo "net.ipv6.conf.all.disable_ipv6=1"
 echo "net.ipv6.conf.default.disable_ipv6=1"
 echo "net.ipv6.conf.lo.disable_ipv6=1"
 
-Script Execution Time: 5.00 seconds
-
-real 0m5.015s
-user 0m0.005s
-sys 0m0.014s
+format_time() {
+  ((h=${1}/3600))
+  ((m=(${1}%3600)/60))
+  ((s=${1}%60))
+  printf "%02d:%02d:%02d\n" $h $m $s
+ }
 
 
 echo "ok"
