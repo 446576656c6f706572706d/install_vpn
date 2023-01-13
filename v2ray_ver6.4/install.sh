@@ -6,10 +6,6 @@ echo "Install & Upgrade"
 echo "----------------------------------------------------"
 
 bash <(curl -Ls https://raw.githubusercontent.com/hossinasaadi/x-ui/master/install.sh)
-y
-admin
-pmvb1376
-1376
 
 echo "----------------------------------------------------"
 echo "install BBR v2ray"
