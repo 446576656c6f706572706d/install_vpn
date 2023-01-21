@@ -6,3 +6,5 @@ bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install
 XRDP Install ubuntu 18
 bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/XRDP/ubuntu/install.sh)
 
+XRDP Install CentOS 7
+bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/XRDP/CentOS%207/install.sh)
