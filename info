@@ -3,6 +3,6 @@ Install all files required for the server
 v2ray install
 bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/v2ray_ver6.4/install.sh)
 
-XRDP Install
-bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/XRDP/install.sh)
+XRDP Install ubuntu 18
+bash <(curl -Ls https://raw.githubusercontent.com/446576656c6f706572706d/install_vpn/main/XRDP/ubuntu/install.sh)
 
