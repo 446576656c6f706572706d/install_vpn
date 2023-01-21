@@ -5,9 +5,16 @@ echo ""
 sudo apt update
 sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
 sudo apt install xrdp 
+sudo systemctl enable xrdp
 sudo systemctl status xrdp
 sudo adduser xrdp ssl-cert  
+sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
+
+
+
 sudo systemctl restart xrdp
+sudo /etc/init.d/xrdp restart
+
 
 echo "______________________________________________________"
 echo "Configuring Firewall > فایروال پورت 3389 باز بشه "
