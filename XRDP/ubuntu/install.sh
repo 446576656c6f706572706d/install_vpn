@@ -30,3 +30,8 @@ echo "systemctl daemon-reload"
 echo "service ssh restart"
 echo "______________________________________________________"
 echo ""
+
+echo "sudo reboot !!!!!!!!!!!!!!!!!!!!!!!!!"
+sleep 1
+sudo reboot
+
