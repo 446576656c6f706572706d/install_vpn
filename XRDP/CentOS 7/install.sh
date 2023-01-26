@@ -13,6 +13,6 @@ sudo firewall-cmd --reload
 
 sudo yum install -y epel-release
 sudo yum groupinstall -y "MATE Desktop"
-echo "Reboot"
+echo "sudo reboot !!!!!!!!!!!!!!!!!!!!!!!"
 sleep 1
 sudo reboot
