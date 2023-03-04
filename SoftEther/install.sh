@@ -36,6 +36,9 @@ l
 
 tar xzf softether-vpnserver-v4.41-9782-beta-2022.11.17-linux-x64-64bit.tar.gz
 
+rm -rf softether-vpnserver-v4.41-9782-beta-2022.11.17-linux-x64-64bit.tar.gz
+
+
 cd vpnserver
 
 make
