@@ -5,7 +5,11 @@ echo "V2ray ver 1.6.4 English"
 echo "Install & Upgrade"
 echo "----------------------------------------------------"
 
-bash <(curl -Ls https://raw.githubusercontent.com/HexaSoftwareTech/x-ui/main/install.sh)
+#bash <(curl -Ls https://raw.githubusercontent.com/HexaSoftwareTech/x-ui/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/HexaSoftwareTech/x-ui/main/x-ui.sh)
+
+
 
 echo "----------------------------------------------------"
 echo "install BBR v2ray"
