@@ -6,7 +6,7 @@ echo "Install & Upgrade"
 echo "----------------------------------------------------"
 
 #bash <(curl -Ls https://raw.githubusercontent.com/HexaSoftwareTech/x-ui/main/install.sh) # v2ray panel EN multi-user v1.6.4
-#bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/main/install.sh) # v2ray panel EN multi-user v1.6
+#bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/main/install.sh) # v2ray panel EN multi-user v1.6.4 >> x-ui 18 item
 
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh) # v2ray panel EN No-user v1.7
 bash <(curl -Ls https://raw.githubusercontent.com/HexaSoftwareTech/x-ui/main/x-ui.sh)
