@@ -2,12 +2,71 @@
 
 echo "1 Installing NGINX  -------------------------------------"
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl git wget unzip -y
-sudo apt install nginx
+sudo apt install apache2 \
+                 ghostscript \
+                 libapache2-mod-php \
+                 php \
+                 php-bcmath \
+                 php-curl \
+                 php-imagick \
+                 php-intl \
+                 php-json \
+                 php-mbstring \
+                 php-mysql \
+                 php-xml \
+                 php-zip
 
-echo "1.1 Enable Nginx on boot --------------------------------"
-sudo systemctl enable nginx
-sudo systemctl status nginx
+echo "1.1 Enable Direct path to the site --------------------------------"
+sudo mkdir -p /srv/www
+sudo chown www-data: /srv/www
+curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+
+'
+<VirtualHost *:80>
+    DocumentRoot /srv/www/wordpress
+    <Directory /srv/www/wordpress>
+        Options FollowSymLinks
+        AllowOverride Limit Options FileInfo
+        DirectoryIndex index.php
+        Require all granted
+    </Directory>
+    <Directory /srv/www/wordpress/wp-content>
+        Options FollowSymLinks
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:443>
+    DocumentRoot "/srv/www/wordpress"
+    ServerName shop.server-v2-01.space
+    SSLEngine on
+    SSLCertificateFile "/etc/letsencrypt/live/shop.server-v2-01.space/cert.crt"
+    SSLCertificateKeyFile "/etc/letsencrypt/live/shop.server-v2-01.space/private.key"
+    #SSLCertificateChainFile /path/to/DigiCertCA.crt
+    <Directory "/srv/www/wordpress">
+    Options All
+    AllowOverride All
+   Require all granted
+    </Directory>
+</VirtualHost>
+'
+step 10
+sudo nano /etc/apache2/sites-available/wordpress.conf
+
+'Enable the site with:'
+sudo a2ensite wordpress
+
+'Enable URL rewriting with:'
+sudo a2enmod rewrite
+
+'Disable the default “It Works” site with:'
+sudo a2dissite 000-default
+
+
+
+echo "1.1 Enable apache2 on boot --------------------------------"
+sudo systemctl enable apache2
+sudo systemctl status apache2
 
 '
 2 Firewall Settings
