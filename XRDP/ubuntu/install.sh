@@ -2,9 +2,10 @@
 #
 echo "install xrdp __________________________________________"
 echo ""
-sudo apt update
-sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
-sudo apt install xrdp 
+sudo apt update -y
+sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils -y
+sudo apt install xrdp -y
+sudo adduser xrdp ssl-cert
 sudo systemctl enable xrdp
 sudo systemctl status xrdp
 sudo adduser xrdp ssl-cert  
@@ -33,5 +34,5 @@ echo ""
 
 echo "sudo reboot !!!!!!!!!!!!!!!!!!!!!!!!!"
 sleep 1
-sudo reboot
+
 
